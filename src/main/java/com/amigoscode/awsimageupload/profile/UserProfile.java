@@ -1,6 +1,7 @@
 package com.amigoscode.awsimageupload.profile;
 
 import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
 
 public class UserProfile {
@@ -31,8 +32,8 @@ public class UserProfile {
         this.username = username;
     }
 
-    public String getUserProfileImageKey() {
-        return userProfileImageKey;
+    public Optional<String> getUserProfileImageKey() {
+        return Optional.ofNullable(userProfileImageKey);
     }
 
     public void setUserProfileImageKey(String userProfileImageKey) {
